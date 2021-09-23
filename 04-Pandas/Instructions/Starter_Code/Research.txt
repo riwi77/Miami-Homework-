@@ -1,0 +1,17 @@
+df = pd.concat([df[col].str.split()
+                       .str[0]
+                       .str.replace(',','').astype(float) for col in df], axis=1)
+
+#if need convert column Purchase count to int
+df['Purchase count'] = df['Purchase count'].astype(int)
+print (df)
+         Total Revenue  Average Revenue  Purchase count  Rate
+Date                                                        
+Monday         1304.4            20.07            2345  1.54
+
+
+
+
+combined_df = pd.concat([whale_df, sp500_df, ], axis="columns", join="inner")
+
+combined_df = pd.concat([whale_df, sp500_df,algo_df ], axis="columns", join="inner")
